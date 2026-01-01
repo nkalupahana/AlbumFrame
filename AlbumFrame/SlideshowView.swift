@@ -70,10 +70,12 @@ struct SlideshowView: View {
         .onAppear {
             fetchPhotos()
             scheduleControlsHiding()
+            UIApplication.shared.isIdleTimerDisabled = true
         }
         .onDisappear {
             timer?.invalidate()
             hideControlsTask?.cancel()
+            UIApplication.shared.isIdleTimerDisabled = false
         }
     }
     
