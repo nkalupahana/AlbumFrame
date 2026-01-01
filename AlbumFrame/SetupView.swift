@@ -56,7 +56,7 @@ struct SetupView: View {
                     ProgressView()
                 }
             }
-            .padding(.horizontal)
+            .padding(.all)
             .onAppear {
                 if configs.isEmpty {
                     let newConfig = SlideshowConfig(albumIdentifier: "", timing: 5, order: .sequential)
