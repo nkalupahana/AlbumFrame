@@ -36,7 +36,7 @@ struct AlbumPickerView: View {
                     .padding()
                     .background(
                         RoundedCorner(radius: cornerRadius, corners: corners)
-                            .fill(Color(.secondarySystemGroupedBackground))
+                            .fill(.secondary.opacity(0.1))
                     )
                 }
                 .buttonStyle(.plain)
