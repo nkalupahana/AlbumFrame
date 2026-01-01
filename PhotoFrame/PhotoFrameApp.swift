@@ -12,7 +12,7 @@ import SwiftData
 struct PhotoFrameApp: App {
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
-            Item.self,
+            SlideshowConfig.self,
         ])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
 
@@ -25,8 +25,10 @@ struct PhotoFrameApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            SetupView()
         }
         .modelContainer(sharedModelContainer)
     }
+    
+    
 }
